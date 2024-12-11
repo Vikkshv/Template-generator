@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Генератор Email-шаблонов</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="top-bar">
+    <button id="preview">Предпросмотр</button>
+    <button id="download">Скачать HTML</button>
+  </div>
+  <div class="container">
+    <div class="toolbar">
+      <h3>Элементы</h3>
+      <button id="addText">Добавить текст</button>
+      <button id="addImage">Добавить изображение</button>
+      <button id="addButton">Добавить кнопку</button>
+      <h3>Настройки</h3>
+      <label>
+        Цвет текста:
+        <input type="color" id="textColor">
+      </label>
+      <label>
+        Размер текста:
+        <input type="number" id="fontSize" value="16">
+      </label>
+      <label>
+        Шрифт:
+        <select id="fontFamily">
+          <option value="Arial">Arial</option>
+          <option value="Verdana">Verdana</option>
+          <option value="Tahoma">Tahoma</option>
+        </select>
+      </label>
+      <label>
+        Фон блока:
+        <input type="color" id="blockBgColor">
+      </label>
+      <label>
+        Размер изображения:
+        <input type="number" id="imgWidth" placeholder="Ширина (px)">
+        <input type="number" id="imgHeight" placeholder="Высота (px)">
+      </label>
+    </div>
+    <div class="workspace">
+      <div class="email-preview" id="emailPreview">
+        <table class="email-table">
+          <tr>
+            <td class="email-header">Логотип</td>
+          </tr>
+          <tr>
+            <td class="email-body">
+              <h2>Заголовок</h2>
+              <p>Основной текст письма.</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="email-footer">Подпись</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
